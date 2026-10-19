@@ -9,7 +9,7 @@ CRITERIA="documentation|Includes installation steps\ntests|Includes reproducible
 def mk(direct_vm,direct_deploy,direct_alice,direct_bob):
     c=direct_deploy("contracts/rubric_ledger.py")
     direct_vm.sender=direct_alice
-    c.create_order("work1",str(direct_bob),"SDK documentation",CRITERIA)
+    c.create_order("work1","0x" + direct_bob.hex(),"SDK documentation",CRITERIA)
     direct_vm.sender=direct_bob
     return c
 
@@ -136,7 +136,7 @@ def test_invalid_criteria(criteria,direct_vm,direct_deploy,direct_alice,direct_b
     c=direct_deploy("contracts/rubric_ledger.py")
     direct_vm.sender=direct_alice
     with direct_vm.expect_revert():
-        c.create_order("w1",str(direct_bob),"Title",criteria)
+        c.create_order("w1","0x" + direct_bob.hex(),"Title",criteria)
 
 def test_identical_revision_rejected(direct_vm,direct_deploy,direct_alice,direct_bob):
     c=mk(direct_vm,direct_deploy,direct_alice,direct_bob)
