@@ -34,3 +34,12 @@ python -m pytest tests/direct -q       # GenLayer Direct Mode, mocked LLM
 ```
 
 CI: `.github/workflows/ci.yml`. Opt-in real Studionet check: `.github/workflows/studionet.yml`. Verified results and their precise limits belong in `docs/PROOF_STATUS.md`. The portal draft is `SUBMISSION_DRAFT.md`.
+
+## Verified GitHub CI (19 October 2026)
+
+- 25/25 offline SDK-stub logic tests passed (not on-chain proof).
+- 25/25 GenLayer Direct Mode tests passed with validator re-execution mocks.
+- GenVM linter: 3/3 checks passed.
+- [GitHub Actions run](https://github.com/maho0638/rubric-ledger-genlayer/actions/runs/39205927038).
+- Source SHA-256: `11e8f3b4916dfa212912d0f363f8ca77de4a410efcca2fed5b73ebd151b9680e`.
+- **No live Studionet run or Portal submission is claimed.**
