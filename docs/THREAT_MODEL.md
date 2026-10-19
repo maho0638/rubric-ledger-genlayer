@@ -1,0 +1,8 @@
+# RubricLedger — Security boundaries
+
+- **Role separation:** only the requester creates or cancels a work order; only its designated worker submits it. Open order criteria cannot change after creation; IDs and receipt IDs are unique, receipts immutable.
+- **Interpretation:** natural-language criteria and text evidence are untrusted. A participant can lie or inject instructions; independent validator checks and strictly normalized labels are risk reduction, not cryptographic evidence verification. No URL fetching, code running, artifact attestation or private document review.
+- **Conservative gate:** the only accepting state is `PASS` for all frozen criteria with confidence >=80 and validator agreement on the *entire result vector*. Malformed, missing, low-confidence or nonsensical output becomes `UNCLEAR`, never an acceptance. A clear FAIL on any criterion cannot become ACCEPTED.
+- **State machine:** OPEN -> ACCEPTED or REVISION_ALLOWED; REVISION_ALLOWED -> ACCEPTED or NOT_ACCEPTED. Requester can cancel while OPEN/REVISION_ALLOWED. Exactly two total assessments maximum, with immutable previous receipts. No arbitrary post-acceptance cancellation or edit.
+- **No money:** results are informational and not enforceable payments, bounties or escrow by themselves. Users must secure downstream integrations separately. Model may misjudge quality even with consensus, so reviewer should not interpret this as a formal quality or legal guarantee.
+- **Canonical binding:** criterion list is normalized and sorted with unique names; SHA-256 criteria hash stored on order and each receipt, separate SHA-256 of submitted text stored on receipt. This binds bytes but does not prove source authenticity.

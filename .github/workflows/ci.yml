@@ -1,0 +1,18 @@
+name: rubric-ledger-genlayer Direct and Lint
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  direct-and-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m pytest tests/offline -q
+      - run: python -m pytest tests/direct -q
+      - run: genvm-lint check contracts/rubric_ledger.py
+      - run: sha256sum contracts/rubric_ledger.py
