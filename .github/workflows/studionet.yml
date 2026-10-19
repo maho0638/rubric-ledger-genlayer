@@ -1,9 +1,6 @@
 name: rubric-ledger-genlayer Studionet Proof (manual)
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/studionet.yml'  # one-shot network verification only when workflow changed
 jobs:
   live-proof:
     runs-on: ubuntu-latest

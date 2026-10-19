@@ -42,4 +42,4 @@ CI: `.github/workflows/ci.yml`. Opt-in real Studionet check: `.github/workflows/
 - GenVM linter: 3/3 checks passed.
 - [GitHub Actions run](https://github.com/maho0638/rubric-ledger-genlayer/actions/runs/39205927038).
 - Source SHA-256: `11e8f3b4916dfa212912d0f363f8ca77de4a410efcca2fed5b73ebd151b9680e`.
-- **No live Studionet run or Portal submission is claimed.**
+- **Live Studionet: 1/1 PASS**, 2 finalized tested calls, [network proof](https://github.com/maho0638/rubric-ledger-genlayer/actions/runs/39207919088), contract `0x2ACc9B1b803649DC9fa0EC38A4f15896923e7d68`. See [proof manifest](docs/PROOF_MANIFEST.json). **Portal not yet submitted.**

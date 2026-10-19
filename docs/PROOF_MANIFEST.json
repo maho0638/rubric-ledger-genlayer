@@ -1,0 +1,24 @@
+{
+  "project": "RubricLedger",
+  "network": "studionet",
+  "observed_on": "2026-10-19",
+  "contract_address": "0x2ACc9B1b803649DC9fa0EC38A4f15896923e7d68",
+  "explorer_url": "https://explorer-studio.genlayer.com/address/0x2ACc9B1b803649DC9fa0EC38A4f15896923e7d68",
+  "contract_path": "contracts/rubric_ledger.py",
+  "contract_source_sha256": "11e8f3b4916dfa212912d0f363f8ca77de4a410efcca2fed5b73ebd151b9680e",
+  "ci_run": "https://github.com/maho0638/rubric-ledger-genlayer/actions/runs/39205927038",
+  "studionet_run": "https://github.com/maho0638/rubric-ledger-genlayer/actions/runs/39207919088",
+  "tests": {
+    "offline_passed": 25,
+    "direct_passed": 25,
+    "genvm_lint_passed": 3,
+    "live_integration_passed": 1
+  },
+  "transactions": {
+    "CREATE_TX": "0x44de4dba68e0155aaaa69b817cc77d9dfd86b3cfbaee0173c2aa5bef6e4b7451",
+    "JUDGE_TX": "0xa629eee057301ddd8ab8c6abf6915fc1827406102eb0b869eb78e49d0a898816"
+  },
+  "observed_result": "ACCEPTED/PASS|PASS",
+  "observed_lifecycle": "Registered a frozen two-criterion work order and obtained a live consensus-backed ACCEPTED decision with PASS/PASS; hash and readback checks passed.",
+  "portal_submitted": false
+}
